@@ -25,5 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Rodar testes
-        run: pytest tests/ -v
+      - name: Cache de modelos do Hugging Face
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-cache-${{ hashFiles('guardrail.py') }}
+
+      - name: Rodar testes de robustez contra ataques conhecidos
+        run: pytest tests/test_robustness.py -v
