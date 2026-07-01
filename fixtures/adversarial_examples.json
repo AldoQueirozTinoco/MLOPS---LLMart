@@ -1,5 +1,5 @@
 {
-  "_comment": "Exemplos ilustrativos, prontos para demo. Não vieram de uma execução real do LLMart, mas seguem o mesmo padrão que o GCG produz: tokens repetidos/gibberish com alta perplexidade. Depois da apresentação, você pode trocar por sufixos reais encontrados pelo LLMart.",
+  "_comment": "Exemplos ilustrativos.",
   "known_attacks": [
     {
       "name": "saturn_gibberish_suffix",
